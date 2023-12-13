@@ -1,0 +1,18 @@
+# Changes here will be overwritten by Copier
+_commit: v1.4.5
+_src_path: gh:lincc-frameworks/python-project-template
+author_email: tlister@lco.global
+author_name: Tim Lister
+create_example_module: true
+custom_install: true
+include_benchmarks: false
+include_docs: true
+include_notebooks: true
+mypy_type_checking: none
+package_name: example_package
+preferred_linter: black
+project_license: BSD
+project_name: lincc_example
+project_organization: talister
+use_gitlfs: none
+use_isort: true
