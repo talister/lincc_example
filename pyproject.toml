@@ -16,6 +16,8 @@ classifiers = [
 dynamic = ["version"]
 dependencies = [
     "ipykernel", # Support for Jupyter notebooks
+    "astropy<6.0",
+    "synphot"
 ]
 
 # On a mac, install optional dependencies with `pip install '.[dev]'` (include the single quotes)
@@ -54,12 +56,12 @@ testpaths = [
 ]
 
 [tool.black]
-line-length = 110
+line-length = 120
 target-version = ["py38"]
 
 [tool.isort]
 profile = "black"
-line_length = 110
+line_length = 120
 
 [tool.coverage.run]
 omit=["src/example_package/_version.py"]
