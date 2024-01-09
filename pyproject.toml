@@ -54,6 +54,9 @@ write_to = "src/example_package/_version.py"
 testpaths = [
     "tests",
 ]
+addopts = [
+    "--import-mode=importlib",
+]
 
 [tool.black]
 line-length = 120
