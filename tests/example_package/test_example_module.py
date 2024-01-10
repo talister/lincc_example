@@ -1,7 +1,17 @@
 import os
+import sys
 
 from astropy.tests.helper import assert_quantity_allclose
-from importlib_resources import files
+
+try:
+    if sys.version_info[0] == 3 and sys.version_info[1] < 10:
+        # Python 3.9 version of importlib.resources.files behaves differently
+        from importlib_resources import files
+    else:
+        from importlib.resources import files
+except ModuleNotFoundError:
+    from importlib_resources import files
+
 from synphot import units
 from synphot.spectrum import BaseUnitlessSpectrum, SourceSpectrum, SpectralElement
 
